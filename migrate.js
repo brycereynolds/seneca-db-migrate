@@ -51,7 +51,7 @@ module.exports = function collection(options) {
       '--migrations-dir ' + options.migrations + 
       '--config ' + options.config +
       '--env ' + options.env +
-      args.act;
+      ' ' + args.act;
 
     exec(cmd)
         .then(function (result) {
