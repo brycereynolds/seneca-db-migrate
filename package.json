@@ -1,0 +1,28 @@
+{
+  "name": "seneca-db-migrate",
+  "version": "0.0.0",
+  "description": "A plugin that expects to execute a local db-migrate based on passed in params. This is used by me internally and not really intended to cover most of db-migrate API.",
+  "main": "s3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified...these are comming soon sorry!\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brycereynolds/seneca-db-migrate.git"
+  },
+  "keywords": [
+    "seneca",
+    "db-migrate"
+  ],
+  "author": "Bryce Reynolds <brycereynoldsdesign@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brycereynolds/seneca-db-migrate/issues"
+  },
+  "homepage": "https://github.com/brycereynolds/seneca-db-migrate#readme",
+  "dependencies": {
+    "child-process-promise": "^1.1.0",
+    "eraro": "^0.4.1",
+    "seneca": "^0.6.4"
+  }
+}
