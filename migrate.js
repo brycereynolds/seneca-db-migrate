@@ -48,9 +48,9 @@ module.exports = function collection(options) {
     // function puts(error, stdout, stderr) { sys.puts(stdout) }
 
     let cmd = 'db-migrate ' +
-      '--migrations-dir ' + options.migrations + 
-      '--config ' + options.config +
-      '--env ' + options.env +
+      ' --migrations-dir ' + options.migrations + 
+      ' --config ' + options.config +
+      ' --env ' + options.env +
       ' ' + args.act;
 
     exec(cmd)
