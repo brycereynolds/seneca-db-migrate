@@ -34,8 +34,8 @@ module.exports = function collection(options) {
     {act: 'up'},
     {act: 'down'},
     {act: 'reset'},
-    {act: 'create'},
-    {act: 'db'},
+    // {act: 'create'},
+    // {act: 'db'},
   ];
 
   // Example act('role:name,cmd:migrate,act:up')
@@ -43,13 +43,8 @@ module.exports = function collection(options) {
 
   // ##############################
 
-  // db-migrate -m ./db/migrations --config ./db/database.json -e production up
-
   // up|down|reset|create|db
   function cmdMigrate(args, done) {
-    // return done(null, args);
-    // function puts(error, stdout, stderr) { sys.puts(stdout) }
-
     if(!options.cmd){
       let cmd = 'db-migrate ' +
         ' --migrations-dir ' + options.migrations + 

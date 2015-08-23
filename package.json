@@ -1,6 +1,6 @@
 {
   "name": "seneca-db-migrate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plugin that expects to execute a local db-migrate based on passed in params. This is used by me internally and not really intended to cover most of db-migrate API.",
   "main": "migrate.js",
   "scripts": {
