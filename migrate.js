@@ -45,14 +45,15 @@ module.exports = function collection(options) {
 
   // up|down|reset|create|db
   function cmdMigrate(args, done) {
+    let cmd;
     if(!options.cmd){
-      let cmd = 'db-migrate ' +
+      cmd = 'db-migrate ' +
         ' --migrations-dir ' + options.migrations + 
         ' --config ' + options.config +
         ' --env ' + options.env +
         ' ' + args.act;
     }else{
-      let cmd = options.cmd;
+      cmd = options.cmd;
     }
 
     exec(cmd)
