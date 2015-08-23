@@ -12,6 +12,9 @@ module.exports = function collection(options) {
   // end point route.
   assert(options.pin);
 
+  // The base migration cmd can be overridden entirely
+  options.cmd = options.cmd || null;
+
   // Location of the database.json file.
   options.config = options.config || process.env.PWD + 'db/database.json';
 
@@ -47,11 +50,15 @@ module.exports = function collection(options) {
     // return done(null, args);
     // function puts(error, stdout, stderr) { sys.puts(stdout) }
 
-    let cmd = 'db-migrate ' +
-      ' --migrations-dir ' + options.migrations + 
-      ' --config ' + options.config +
-      ' --env ' + options.env +
-      ' ' + args.act;
+    if(!options.cmd){
+      let cmd = 'db-migrate ' +
+        ' --migrations-dir ' + options.migrations + 
+        ' --config ' + options.config +
+        ' --env ' + options.env +
+        ' ' + args.act;
+    }else{
+      let cmd = options.cmd;
+    }
 
     exec(cmd)
         .then(function (result) {
