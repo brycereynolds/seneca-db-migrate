@@ -22,7 +22,7 @@
   "homepage": "https://github.com/brycereynolds/seneca-db-migrate#readme",
   "dependencies": {
     "child-process-promise": "^1.1.0",
-    "db-migrate": "^0.9.20",
+    "db-migrate": "0.9.22",
     "eraro": "^0.4.1",
     "seneca": "^0.6.4"
   }
