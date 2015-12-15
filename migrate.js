@@ -5,7 +5,7 @@ var sys = require('sys');
 var exec = require('child-process-promise').exec;
 
 
-module.exports = function collection(options) {
+module.exports = function migrate(options) {
   var _this = this;
 
   // A pin option is required. We use this to build your 
