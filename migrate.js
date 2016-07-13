@@ -65,12 +65,9 @@ module.exports = function migrate(options) {
 
             return done(null, {ok: true});
         })
-        .fail(function (err) {
+        .catch(function (err) {
             console.error('ERROR: ', err);
             return done(err);
-        })
-        .progress(function (childProcess) {
-            console.log('childProcess.pid: ', childProcess.pid);
         });
 
   }
